@@ -8,11 +8,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "03dd9b1bfb4f730c2f2668accb8ff6ade9050d29",
+  "commitish" : "457a929d8b5d3a3b2ba72cc5f0afef83f725319c",
   "iOS" : [
     {
       "name" : "flickrDownloadFramework",
-      "hash" : "59ba0337dd09b32b3542db9d9a57fb865fd53cb733807dbfb53882172c12ea98",
+      "hash" : "0cc1e581b05102918a7a81db37e4a65babefeba1007f62ae2acd15c48fa5887a",
       "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
