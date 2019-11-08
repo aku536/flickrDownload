@@ -1,0 +1,11 @@
+framework module flickrDownloadFramework {
+  umbrella header "flickrDownloadFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module flickrDownloadFramework.Swift {
+    header "flickrDownloadFramework-Swift.h"
+    requires objc
+}
