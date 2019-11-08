@@ -1,2 +1,3 @@
-# flickrDownload
-Fast work with Flickr API
+flickrDownload
+===
+Фреймворк для удобного доступа к API Flickr и загрузке фотографий и их описаний.
