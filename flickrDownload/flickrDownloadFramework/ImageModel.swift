@@ -8,12 +8,22 @@
 
 import UIKit
 
-struct ImageModel {
-    let path: String
-    let description: String
+public struct ImageModel {
+    public let path: String
+    public let description: String
+    
+    public init(path: String, description: String) {
+        self.path = path
+        self.description = description
+    }
 }
 
-struct ImageViewModel {
-    let description: String
-    let image: UIImage
+public struct ImageViewModel {
+    public let description: String
+    public let image: UIImage
+    
+    public init(description: String, image: UIImage) {
+        self.description = description
+        self.image = image
+    }
 }

@@ -19,10 +19,6 @@
 		02E61E59237563A600F8C9CF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E61E3E2375619200F8C9CF /* NetworkService.swift */; };
 		02E61E5B2375646D00F8C9CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E61E5A2375646D00F8C9CF /* ViewController.swift */; };
 		02E61E5D237564EE00F8C9CF /* SessionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E61E5C237564EE00F8C9CF /* SessionFactory.swift */; };
-		02E61E5F2375661700F8C9CF /* flickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E61E3C2375613F00F8C9CF /* flickrAPI.swift */; };
-		02E61E602375661C00F8C9CF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E61E3E2375619200F8C9CF /* NetworkService.swift */; };
-		02E61E612375661C00F8C9CF /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E61E40237561AE00F8C9CF /* ImageModel.swift */; };
-		02E61E622375661C00F8C9CF /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E61E422375627000F8C9CF /* Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,13 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E61E602375661C00F8C9CF /* NetworkService.swift in Sources */,
-				02E61E612375661C00F8C9CF /* ImageModel.swift in Sources */,
 				02E61E5B2375646D00F8C9CF /* ViewController.swift in Sources */,
 				02E61E2B237560E900F8C9CF /* AppDelegate.swift in Sources */,
 				02E61E5D237564EE00F8C9CF /* SessionFactory.swift in Sources */,
-				02E61E622375661C00F8C9CF /* Interactor.swift in Sources */,
-				02E61E5F2375661700F8C9CF /* flickrAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

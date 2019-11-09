@@ -8,20 +8,20 @@
 
 import UIKit
 
-protocol InteractorInput {
+public protocol InteractorInput {
     func loadImageList(by searchngString: String, completion: @escaping([ImageModel]) -> Void)
     func loadImage(at path: String, completion: @escaping (UIImage?) -> Void)
 }
 
-class Interactor: InteractorInput {
+public class Interactor: InteractorInput {
     
     let networkService: NetworkServiceInput
     
-    init(networkService: NetworkServiceInput) {
+    public init(networkService: NetworkServiceInput) {
         self.networkService = networkService
     }
     
-    func loadImageList(by searchString: String, completion: @escaping([ImageModel]) -> Void) {
+    public func loadImageList(by searchString: String, completion: @escaping([ImageModel]) -> Void) {
         let url = API.searchPath(text: searchString, extras: "url_m")
         networkService.getData(at: url, parameters: nil) { data in
             guard let data = data else {
@@ -42,7 +42,7 @@ class Interactor: InteractorInput {
         }
     }
     
-    func loadImage(at path: String, completion: @escaping (UIImage?) -> Void) {
+    public func loadImage(at path: String, completion: @escaping (UIImage?) -> Void) {
         networkService.getData(at: path, parameters: nil) { data in
             guard let data = data else { return }
             let image = UIImage(data: data)

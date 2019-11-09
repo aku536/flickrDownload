@@ -8,7 +8,7 @@
 
 import UIKit
 
-class API {
+public class API {
     
     private static let apiKey = "dab4052df3cc23ed39745a8cca163e0a"
     private static let baseURL = "https://www.flickr.com/services/rest"
