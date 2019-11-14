@@ -19,22 +19,22 @@ flickrDownload
 И воспользоваться его методами
 
 1. `func loadImageList(by searchngString: String, completion: @escaping([ImageModel]) -> Void)`
+Загружает список доступных изображений по заданному ключевому слову
 2. `func loadImage(at path: String, completion: @escaping (UIImage?) -> Void)`
-
-
-1. Загружает список доступных изображений по заданному ключевому слову
-2. Загружает изображение по адресу
+Загружает изображение по адресу
 
 Пример использования в коде:
 
 ```
 private func loadData() {
+  // Получаем список изображений по слову "cat"
   interactor.loadImageList(by: "cat") { (models) in
 
   for index in 0...10 {
-    self.flickrImages.append(models[index])
+    self.flickrImages.append(models[index]) // добавляем первые 10 изображений в свою модель
   }
 
+  // Загружаем каждое изображение из модели, сохраняем изображения в модели и обновляем таблицу
   for fImage in self.flickrImages {
     let imagePath = fImage.path
     self.interactor.loadImage(at: imagePath) { [weak self] image in
