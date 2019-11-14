@@ -16,36 +16,37 @@ flickrDownload
 
 `let interactor: InteractorInput`
 
-И воспользоваться его методоми
+И воспользоваться его методами
 
 1. `func loadImageList(by searchngString: String, completion: @escaping([ImageModel]) -> Void)`
 2. `func loadImage(at path: String, completion: @escaping (UIImage?) -> Void)`
+
 
 1. Загружает список доступных изображений по заданному ключевому слову
 2. Загружает изображение по адресу
 
 Пример использования в коде:
 
-```private func loadData() {
-interactor.loadImageList(by: "cat") { (models) in
-//self.images = models
+```
+private func loadData() {
+  interactor.loadImageList(by: "cat") { (models) in
 
-for index in 0...10 {
-self.flickrImages.append(models[index])
-}
+  for index in 0...10 {
+    self.flickrImages.append(models[index])
+  }
 
-for fImage in self.flickrImages {
-let imagePath = fImage.path
-self.interactor.loadImage(at: imagePath) { [weak self] image in
-if let image = image {
-let model = ImageViewModel(description: fImage.description, image: image)
-self?.images.append(model)
-DispatchQueue.main.async {
-self?.tableView.reloadData()
+  for fImage in self.flickrImages {
+    let imagePath = fImage.path
+    self.interactor.loadImage(at: imagePath) { [weak self] image in
+      if let image = image {
+        let model = ImageViewModel(description: fImage.description, image: image)
+        self?.images.append(model)
+        DispatchQueue.main.async {
+          self?.tableView.reloadData()
+        }
+      }
+     }
+   }
+  }
 }
-}
-}
-}
-}
-}
-}```
+```
